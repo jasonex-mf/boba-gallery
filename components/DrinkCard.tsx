@@ -1,71 +1,79 @@
+import Image from "next/image";
 import type { BobaDrink } from "@/lib/drinks";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 
 export function DrinkCard({ drink }: { drink: BobaDrink }) {
   return (
-    <article className="flex flex-col gap-4 rounded-2xl border border-black/[.08] bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-white/[.1] dark:bg-zinc-900">
-      <div className="aspect-square w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
+    <Card className="gap-0 border-none bg-card/90 py-0 shadow-sm ring-1 ring-amber-900/8 transition-shadow hover:shadow-md hover:ring-amber-900/12">
+      <div className="relative aspect-square w-full overflow-hidden bg-muted">
         {drink.imageUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <Image
             src={drink.imageUrl}
             alt={drink.name}
-            className="h-full w-full object-cover"
+            fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            className="object-cover"
           />
         ) : (
-          <div className="flex h-full w-full flex-col items-center justify-center gap-1 border-2 border-dashed border-zinc-300 text-zinc-400 dark:border-zinc-700 dark:text-zinc-600">
+          <div className="flex h-full w-full flex-col items-center justify-center gap-1 border-2 border-dashed border-muted-foreground/30 text-muted-foreground">
             <span className="text-3xl">🧋</span>
             <span className="text-xs font-medium">Photo coming soon</span>
           </div>
         )}
       </div>
 
-      <div className="flex flex-col gap-2">
-        <span className="w-fit rounded-full bg-black/[.05] px-2.5 py-0.5 text-xs font-medium uppercase tracking-wide text-zinc-600 dark:bg-white/[.08] dark:text-zinc-400">
-          {drink.category}
-        </span>
-        <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
-          {drink.name}
-        </h2>
-        <p className="text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-          {drink.description}
-        </p>
-      </div>
+      <CardContent className="flex flex-col gap-3 p-6">
+        <div className="flex flex-col gap-2">
+          <div className="flex flex-wrap gap-1.5">
+            {drink.categories.map((category) => (
+              <Badge
+                key={category}
+                variant="secondary"
+                className="w-fit uppercase tracking-wide"
+              >
+                {category}
+              </Badge>
+            ))}
+          </div>
+          <h2 className="font-heading text-lg font-semibold text-foreground">
+            {drink.name}
+          </h2>
+          <p className="text-sm leading-6 text-muted-foreground">
+            {drink.description}
+          </p>
+        </div>
 
-      <div className="flex flex-col gap-1.5">
-        <h3 className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-500">
-          What&apos;s in it
-        </h3>
-        <ul className="flex flex-wrap gap-1.5">
-          {drink.ingredients.map((ingredient) => (
-            <li
-              key={ingredient}
-              className="rounded-full border border-black/[.08] px-2.5 py-0.5 text-xs text-zinc-600 dark:border-white/[.12] dark:text-zinc-400"
-            >
-              {ingredient}
-            </li>
+        <div className="flex flex-col gap-1.5">
+          <h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+            What&apos;s in it
+          </h3>
+          <ul className="flex flex-wrap gap-1.5">
+            {drink.ingredients.map((ingredient) => (
+              <li key={ingredient}>
+                <Badge variant="outline">{ingredient}</Badge>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="flex flex-wrap gap-2">
+          {drink.tags.map((tag) => (
+            <span key={tag} className="text-xs text-muted-foreground/70">
+              #{tag}
+            </span>
           ))}
-        </ul>
-      </div>
+        </div>
 
-      <div className="flex flex-wrap gap-2">
-        {drink.tags.map((tag) => (
-          <span
-            key={tag}
-            className="text-xs text-zinc-400 dark:text-zinc-600"
-          >
-            #{tag}
-          </span>
-        ))}
-      </div>
-
-      <a
-        href={drink.shopUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-xs font-medium text-zinc-400 hover:text-zinc-600 hover:underline dark:text-zinc-600 dark:hover:text-zinc-400"
-      >
-        via {drink.shop}
-      </a>
-    </article>
+        <a
+          href={drink.shopUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs font-medium text-muted-foreground/70 hover:text-foreground hover:underline"
+        >
+          via {drink.shop}
+        </a>
+      </CardContent>
+    </Card>
   );
 }
