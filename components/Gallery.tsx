@@ -1,8 +1,19 @@
 "use client";
 
 import { useState } from "react";
+import { Search } from "lucide-react";
 import type { BobaDrink, DrinkCategory } from "@/lib/drinks";
 import { DrinkCard } from "@/components/DrinkCard";
+import { Input } from "@/components/ui/input";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Separator } from "@/components/ui/separator";
 
 export function Gallery({
   drinks,
@@ -22,7 +33,10 @@ export function Gallery({
   const normalizedQuery = query.trim().toLowerCase();
 
   const filteredDrinks = drinks.filter((drink) => {
-    if (activeCategory !== "All" && drink.category !== activeCategory) {
+    if (
+      activeCategory !== "All" &&
+      !drink.categories.includes(activeCategory)
+    ) {
       return false;
     }
     if (activeShop !== "All" && drink.shop !== activeShop) {
@@ -45,72 +59,94 @@ export function Gallery({
     return true;
   });
 
+  const shopGroups = shops
+    .map((shop) => ({
+      shop,
+      drinks: filteredDrinks.filter((drink) => drink.shop === shop),
+    }))
+    .filter((group) => group.drinks.length > 0);
+
   return (
     <div className="flex w-full flex-col gap-8">
       <div className="flex flex-col items-center gap-4">
         <div className="relative w-full max-w-md">
-          <svg
-            className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400 dark:text-zinc-500"
-            viewBox="0 0 20 20"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={1.5}
-            aria-hidden="true"
-          >
-            <circle cx="9" cy="9" r="6" />
-            <path d="M17 17 L13.5 13.5" strokeLinecap="round" />
-          </svg>
-          <input
+          <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+          <Input
             type="text"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search drinks, ingredients, shops..."
-            className="w-full rounded-full border border-black/[.08] bg-white py-2.5 pl-9 pr-4 text-sm text-zinc-900 placeholder:text-zinc-400 dark:border-white/[.145] dark:bg-zinc-900 dark:text-zinc-50 dark:placeholder:text-zinc-500"
+            className="rounded-full pl-9"
           />
         </div>
 
-        <div className="flex flex-wrap justify-center gap-2">
-          {(["All", ...categories] as const).map((category) => (
-            <button
-              key={category}
-              type="button"
-              onClick={() => setActiveCategory(category)}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                activeCategory === category
-                  ? "bg-foreground text-background"
-                  : "border border-black/[.08] text-zinc-600 hover:bg-black/[.04] dark:border-white/[.145] dark:text-zinc-400 dark:hover:bg-white/[.06]"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
-        <label className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-          Shop
-          <select
-            value={activeShop}
-            onChange={(event) => setActiveShop(event.target.value)}
-            className="rounded-full border border-black/[.08] bg-white px-3 py-1.5 text-sm text-zinc-900 dark:border-white/[.145] dark:bg-zinc-900 dark:text-zinc-50"
-          >
-            <option value="All">All shops</option>
-            {shops.map((shop) => (
-              <option key={shop} value={shop}>
-                {shop}
-              </option>
+        <Tabs
+          value={activeCategory}
+          onValueChange={(value) =>
+            setActiveCategory(value as DrinkCategory | "All")
+          }
+        >
+          <TabsList className="flex-wrap justify-center bg-transparent p-0 gap-2 h-auto text-foreground">
+            {(["All", ...categories] as const).map((category) => (
+              <TabsTrigger
+                key={category}
+                value={category}
+                className="rounded-full border border-foreground/25 bg-card/80 px-4 py-1.5 font-semibold text-foreground hover:bg-card hover:text-foreground data-active:bg-foreground data-active:text-background data-active:shadow-none dark:border-foreground/30 dark:data-active:bg-foreground dark:data-active:text-background"
+              >
+                {category}
+              </TabsTrigger>
             ))}
-          </select>
+          </TabsList>
+        </Tabs>
+
+        <label className="flex items-center gap-2 text-sm font-medium text-foreground/80">
+          Shop
+          <Select
+            value={activeShop}
+            onValueChange={(value) => setActiveShop(value ?? "All")}
+          >
+            <SelectTrigger className="rounded-full font-medium text-foreground">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="All">All shops</SelectItem>
+              {shops.map((shop) => (
+                <SelectItem key={shop} value={shop}>
+                  {shop}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </label>
       </div>
 
-      {filteredDrinks.length === 0 ? (
-        <p className="text-center text-sm text-zinc-500 dark:text-zinc-500">
+      {shopGroups.length === 0 ? (
+        <p className="text-center text-sm text-muted-foreground">
           No drinks match that filter yet.
         </p>
       ) : (
-        <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {filteredDrinks.map((drink) => (
-            <DrinkCard key={drink.id} drink={drink} />
+        <div className="flex w-full flex-col gap-12">
+          {shopGroups.map(({ shop, drinks: shopDrinks }) => (
+            <section key={shop} className="flex flex-col gap-5">
+              <div className="flex flex-col gap-3">
+                <div className="flex items-baseline gap-3">
+                  <h2 className="font-heading text-2xl font-bold tracking-tight text-foreground">
+                    {shop}
+                  </h2>
+                  <span className="text-sm font-medium text-foreground/70">
+                    {shopDrinks.length}{" "}
+                    {shopDrinks.length === 1 ? "drink" : "drinks"}
+                  </span>
+                </div>
+                <Separator />
+              </div>
+
+              <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {shopDrinks.map((drink) => (
+                  <DrinkCard key={drink.id} drink={drink} />
+                ))}
+              </div>
+            </section>
           ))}
         </div>
       )}
