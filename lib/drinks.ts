@@ -32,7 +32,7 @@ export const DRINKS: BobaDrink[] = [
       "Freshly picked double-petal jasmine tea, blended with premium milk for a floral, fragrant cup.",
     imageUrl:
       "https://usa.mollytea.com/wp-content/uploads/2025/07/Premium-Jasmine-Milk-Tea.png",
-    ingredients: ["Jasmine tea", "Milk", "Sugar"],
+    ingredients: ["Jasmine tea", "Sugar"],
     tags: ["floral", "fragrant"],
     shop: "Molly Tea",
     shopUrl: "https://usa.mollytea.com/product-categories/",
@@ -44,7 +44,7 @@ export const DRINKS: BobaDrink[] = [
     description: "Longjing tea paired with golden osmanthus, finished with milk.",
     imageUrl:
       "https://usa.mollytea.com/wp-content/uploads/2025/07/Osmanthus-Milk-Tea-1.png",
-    ingredients: ["Longjing green tea", "Osmanthus flower", "Milk"],
+    ingredients: ["Longjing green tea", "Osmanthus flower"],
     tags: ["floral", "honeyed"],
     shop: "Molly Tea",
     shopUrl: "https://usa.mollytea.com/product-categories/",
@@ -56,7 +56,7 @@ export const DRINKS: BobaDrink[] = [
     description: "Mengding high mountain tea with a delicate orchid aroma, and milk.",
     imageUrl:
       "https://usa.mollytea.com/wp-content/uploads/2025/07/White-Champaca-Milk-Tea.png",
-    ingredients: ["Mengding mountain tea", "White champaca flower", "Milk"],
+    ingredients: ["Mengding mountain tea", "White champaca flower"],
     tags: ["floral", "mountain tea"],
     shop: "Molly Tea",
     shopUrl: "https://usa.mollytea.com/product-categories/",
@@ -69,7 +69,7 @@ export const DRINKS: BobaDrink[] = [
       "High-altitude Sichuan green tea infused with mountain gardenia, and milk.",
     imageUrl:
       "https://usa.mollytea.com/wp-content/uploads/2025/07/Gardenia-Milk-Tea.png",
-    ingredients: ["Sichuan green tea", "Gardenia flower", "Milk"],
+    ingredients: ["Sichuan green tea", "Gardenia flower"],
     tags: ["floral", "high-altitude"],
     shop: "Molly Tea",
     shopUrl: "https://usa.mollytea.com/product-categories/",
@@ -211,7 +211,7 @@ export const DRINKS: BobaDrink[] = [
       "Our first teamix. Nine-scented spring jasmine tea, crafted with over 5,000 fresh jasmine blossoms for every 500g of tea, with no artificial flavor. Blended with red guava and real milk, topped with our handcrafted in-house guava cloud.",
     imageUrl:
       "https://www-test-cos-cdn.test.heytea.com/images/2026/06/4d2ea5cf-e5e0-487f-a2c2-77bdb1fac8f5.png",
-    ingredients: ["Jasmine tea", "Red guava", "Milk", "Guava cloud"],
+    ingredients: ["Jasmine tea", "Red guava", "Guava cloud"],
     tags: ["jasmine", "guava"],
     shop: "HeyTea",
     shopUrl: "https://www.heytea.com/products",
@@ -276,7 +276,7 @@ export const DRINKS: BobaDrink[] = [
       "A customised jasmine tea base, scented with 3,000 jasmine flowers per 500g, blended with real milk, no artificial creamer. Naturally floral with a light, refreshing taste.",
     imageUrl:
       "https://www-test-cos-cdn.test.heytea.com/images/2026/06/08f654c1-2d26-4a08-a448-bbe8ea755cf8.png",
-    ingredients: ["Jasmine tea", "Milk"],
+    ingredients: ["Jasmine tea"],
     tags: ["floral", "light"],
     shop: "HeyTea",
     shopUrl: "https://www.heytea.com/products",
@@ -588,7 +588,7 @@ export const DRINKS: BobaDrink[] = [
       "霸王茶姬经典款&畅销款，累计销量突破6亿杯。原叶茶胚经过三到五次的横县双瓣茉莉窨制的茉莉雪芽，芽叶细嫩，口感清新自然，搭配优质牛乳，层次丰富，回味悠长，不做作。 — CHAGEE's classic bestseller with over 600 million cups sold. The tea base is scented three to five times with double-petal jasmine from Hengxian, giving tender jasmine snow buds a fresh, natural taste, paired with premium milk for a rich, long-lingering finish.",
     imageUrl:
       "https://img-official-prod-cn.chagee.com/web/uploads/20240828/4b5d3e3a-c142-4279-96f3-79c21ddaee34.jpg",
-    ingredients: ["Jasmine tea", "Milk"],
+    ingredients: ["Jasmine tea"],
     tags: ["jasmine", "bestseller"],
     shop: "Chagee China",
     shopUrl: "https://chagee.com/zh-cn/product/fresh-milk-tea-series?autoscroll=lists",
@@ -601,7 +601,7 @@ export const DRINKS: BobaDrink[] = [
       "选用云南普洱大叶烘青拼配四川乐山小叶烘青，配合足量大花栀子和二栀子窨制，花香甜润，茶香馥郁。茶汤清甜醇厚，栀子花香清冷温柔，搭配优质牛乳，口感顺滑，丝丝回甘。 — Yunnan Pu'er large-leaf roasted green tea blended with Sichuan small-leaf roasted green tea, scented with generous gardenia blossoms. Sweet and mellow tea liquor with a cool, gentle gardenia fragrance, paired with premium milk for a smooth, lingering sweetness.",
     imageUrl:
       "https://img-official-prod-cn.chagee.com/web/uploads/20240828/ea6a8e27-b143-4de5-b12a-fa75cde927f7.jpg",
-    ingredients: ["Green tea", "Gardenia flower", "Milk"],
+    ingredients: ["Green tea", "Gardenia flower"],
     tags: ["gardenia", "floral"],
     shop: "Chagee China",
     shopUrl: "https://chagee.com/zh-cn/product/fresh-milk-tea-series?autoscroll=lists",
@@ -614,7 +614,7 @@ export const DRINKS: BobaDrink[] = [
       "甄选自浙江龙井产区的龙井春茶，传承传统炒制技艺，充分\"辉锅\"带有独特浓醇豆香，入口香气高扬清远，鲜醇甘爽。 — Spring Longjing tea from Zhejiang, roasted with traditional techniques for a deep, toasty aroma. Bright and clear on entry, with a fresh, mellow, sweet finish.",
     imageUrl:
       "https://img-official-prod-cn.chagee.com/web/uploads/20240911/1c0c60fc-d737-4674-89c0-405d1687c746.png",
-    ingredients: ["Longjing green tea", "Milk"],
+    ingredients: ["Longjing green tea"],
     tags: ["roasted", "longjing"],
     shop: "Chagee China",
     shopUrl: "https://chagee.com/zh-cn/product/fresh-milk-tea-series?autoscroll=lists",
@@ -627,7 +627,7 @@ export const DRINKS: BobaDrink[] = [
       "云南特产草本植物糯米香叶窨制而成的绿茶茶底，产品带有浓郁的糯米香，谷物香气浓郁，回甘持久。 — A green tea base scented with Yunnan's fragrant glutinous-rice herb, carrying a rich grain aroma and a long, sweet aftertaste.",
     imageUrl:
       "https://img-official-prod-cn.chagee.com/web/uploads/20240828/60c2a285-9844-42a4-ab0c-8bca87b30222.jpg",
-    ingredients: ["Green tea", "Glutinous rice leaf", "Milk"],
+    ingredients: ["Green tea", "Glutinous rice leaf"],
     tags: ["glutinous rice", "grainy"],
     shop: "Chagee China",
     shopUrl: "https://chagee.com/zh-cn/product/fresh-milk-tea-series?autoscroll=lists",
@@ -640,7 +640,7 @@ export const DRINKS: BobaDrink[] = [
       "精选不同海拔的锡兰红茶进行拼配，茶香高长、果香丰富、甜香清凉，和优质牛乳结合，细腻丝滑，滋味饱满醇厚。 — Ceylon black teas from different altitudes are blended for a tall, fruity aroma and cool sweetness, combined with premium milk for a silky, full-bodied cup.",
     imageUrl:
       "https://img-official-prod-cn.chagee.com/web/uploads/20240828/921e75c4-5583-4b53-8323-f1aa14804283.jpg",
-    ingredients: ["Ceylon black tea", "Milk"],
+    ingredients: ["Ceylon black tea"],
     tags: ["ceylon", "fruity"],
     shop: "Chagee China",
     shopUrl: "https://chagee.com/zh-cn/product/fresh-milk-tea-series?autoscroll=lists",
@@ -653,7 +653,7 @@ export const DRINKS: BobaDrink[] = [
       "优选闽南乌龙茶底，自然拼配广西桂花，茶底0添加香精、牛乳0奶精、整杯0反式脂肪酸。自然桂花香搭配中焙火乌龙，醇厚清甜，口感细腻。 — Southern Fujian oolong naturally blended with Guangxi osmanthus flowers — zero added flavoring, zero creamer, zero trans fat. Natural osmanthus fragrance with medium-roast oolong, mellow and sweet with a delicate finish.",
     imageUrl:
       "https://img-official-prod-cn.chagee.com/web/uploads/20240828/c76f5c87-b857-4e3b-a3be-28282408f7b4.jpg",
-    ingredients: ["Oolong tea", "Osmanthus flower", "Milk"],
+    ingredients: ["Oolong tea", "Osmanthus flower"],
     tags: ["osmanthus", "oolong"],
     shop: "Chagee China",
     shopUrl: "https://chagee.com/zh-cn/product/fresh-milk-tea-series?autoscroll=lists",
@@ -666,7 +666,7 @@ export const DRINKS: BobaDrink[] = [
       "采用优质大红袍茶，干茶外形条索肥壮，茶叶嫩度好，茶香优而强烈，芬芳持久。 — Made with premium Da Hong Pao tea — plump, tender leaves with a strong, long-lasting fragrance.",
     imageUrl:
       "https://img-official-prod-cn.chagee.com/web/uploads/20240828/d4c04e7c-f182-494e-8fec-0951dc60828a.jpg",
-    ingredients: ["Da Hong Pao oolong tea", "Milk"],
+    ingredients: ["Da Hong Pao oolong tea"],
     tags: ["da hong pao", "fragrant"],
     shop: "Chagee China",
     shopUrl: "https://chagee.com/zh-cn/product/fresh-milk-tea-series?autoscroll=lists",
@@ -679,7 +679,7 @@ export const DRINKS: BobaDrink[] = [
       "云南特推。原叶茶胚严选六年陈香普洱，来自世界茶树原产地的中心地带勐海，拼配云南重瓣红玫瑰，清香馥郁，搭配优质牛乳，入口香滑甘醇，一花一叶，一口云南。 — A Yunnan specialty. Six-year aged Pu'er from Menghai, the birthplace of the tea tree, blended with Yunnan double-petal red roses for a rich floral aroma, paired with premium milk for a smooth, mellow sip — one flower, one leaf, one taste of Yunnan.",
     imageUrl:
       "https://img-official-prod-cn.chagee.com/web/uploads/20240828/b0bcbd3e-2d46-4d2b-b0a6-ec2bec4302c5.jpg",
-    ingredients: ["Aged Pu'er tea", "Rose", "Milk"],
+    ingredients: ["Aged Pu'er tea", "Rose"],
     tags: ["rose", "pu'er"],
     shop: "Chagee China",
     shopUrl: "https://chagee.com/zh-cn/product/fresh-milk-tea-series?autoscroll=lists",
@@ -692,7 +692,7 @@ export const DRINKS: BobaDrink[] = [
       "茶底升级，选用闽南金观音，真实水蜜桃汁入茶，乌龙茶醇厚回甘，桃香自然纯粹。优质牛乳加入，口感顺滑，果香清甜。 — An upgraded tea base of Minnan Jin Guanyin with real white peach juice, giving mellow oolong sweetness and pure, natural peach fragrance, rounded out with premium milk.",
     imageUrl:
       "https://img-official-prod-cn.chagee.com/web/uploads/20240828/5c6ea780-5acc-424e-b63e-9d4a5f1931e3.jpg",
-    ingredients: ["Jin Guanyin oolong tea", "White peach juice", "Milk"],
+    ingredients: ["Jin Guanyin oolong tea", "White peach juice"],
     tags: ["peach", "oolong"],
     shop: "Chagee China",
     shopUrl: "https://chagee.com/zh-cn/product/fresh-milk-tea-series?autoscroll=lists",
@@ -705,7 +705,7 @@ export const DRINKS: BobaDrink[] = [
       "云南金丝滇红拼配福建正山小种，调整2大名优红茶种之间的微妙比例，可以充分表达红茶风骨：正山的甜润和滇红的果香相互缠绕，不同产地中国红茶的微妙地域特色都得到保留。 — Yunnan golden Dianhong black tea blended with Fujian Zhengshan Xiaozhong (Lapsang Souchong), balancing the sweetness of Zhengshan with the fruitiness of Dianhong while preserving each region's character.",
     imageUrl:
       "https://img-official-prod-cn.chagee.com/web/uploads/20240828/b3d4342b-736a-4f74-a91e-aadb662ede65.jpg",
-    ingredients: ["Dianhong black tea", "Lapsang Souchong", "Milk"],
+    ingredients: ["Dianhong black tea", "Lapsang Souchong"],
     tags: ["black tea", "smoky"],
     shop: "Chagee China",
     shopUrl: "https://chagee.com/zh-cn/product/fresh-milk-tea-series?autoscroll=lists",
@@ -718,7 +718,7 @@ export const DRINKS: BobaDrink[] = [
       "茶底采用优质铁观音，香气清新，回甘纯正，后感顺滑，有清淡的兰花香。 — A tea base of premium Tie Guanyin oolong — fresh aroma, pure sweet aftertaste, and a light orchid fragrance.",
     imageUrl:
       "https://img-official-prod-cn.chagee.com/web/uploads/20240828/87c7dfb7-b1ad-4d2a-b415-c39a4a21ded0.jpg",
-    ingredients: ["Tie Guanyin oolong tea", "Milk"],
+    ingredients: ["Tie Guanyin oolong tea"],
     tags: ["tie guanyin", "orchid"],
     shop: "Chagee China",
     shopUrl: "https://chagee.com/zh-cn/product/fresh-milk-tea-series?autoscroll=lists",
@@ -757,7 +757,7 @@ export const DRINKS: BobaDrink[] = [
       "茶底升级，选用闽南金观音，真实水蜜桃汁入茶，乌龙茶醇厚回甘，牛乳加入，入口更丝滑。搭配蜜桃风味奶油雪顶和无花果碎，多重口感，丰富有层次。 — An upgraded Jin Guanyin oolong base with real white peach juice and milk for a silkier sip, topped with peach-flavored whipped cream and fig crumble for a rich, layered texture.",
     imageUrl:
       "https://img-official-prod-cn.chagee.com/web/uploads/20240828/824e1b5f-9927-4dae-819f-1b63c90c3ad2.jpg",
-    ingredients: ["Jin Guanyin oolong tea", "White peach juice", "Milk", "Whipped cream", "Fig"],
+    ingredients: ["Jin Guanyin oolong tea", "White peach juice", "Whipped cream", "Fig"],
     tags: ["peach", "whipped cream"],
     shop: "Chagee China",
     shopUrl: "https://chagee.com/zh-cn/product/snowy-frappe-series?autoscroll=lists",

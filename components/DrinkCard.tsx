@@ -29,7 +29,7 @@ export function DrinkCard({ drink }: { drink: BobaDrink }) {
             {drink.categories.map((category) => (
               <Badge
                 key={category}
-                variant="secondary"
+                variant="default"
                 className="w-fit uppercase tracking-wide"
               >
                 {category}
@@ -45,7 +45,7 @@ export function DrinkCard({ drink }: { drink: BobaDrink }) {
         </div>
 
         <div className="flex flex-col gap-1.5">
-          <h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+          <h3 className="text-xs font-bold uppercase tracking-wide text-foreground">
             What&apos;s in it
           </h3>
           <ul className="flex flex-wrap gap-1.5">
