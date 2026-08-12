@@ -354,7 +354,7 @@ export const DRINKS: BobaDrink[] = [
       "CHAGEE's iconic global bestseller, loved for its delicate floral aroma and smooth, silky finish. The fragrant jasmine tea perfectly blends with milk, creating a refreshing yet indulgent balance of light florals and rich, velvety texture.",
     imageUrl:
       "https://prod-us-web.s3.us-west-1.amazonaws.com/uploads/20251214/46854f77-5e6f-458b-a286-ca2863608e45.jpg",
-    ingredients: ["Jasmine green tea", "Milk"],
+    ingredients: ["Jasmine green tea"],
     tags: ["jasmine", "bestseller"],
     shop: "Chagee",
     shopUrl: "https://www.chagee.us/product/Tea%20Lattes?autoscroll=lists",
@@ -367,7 +367,7 @@ export const DRINKS: BobaDrink[] = [
       "A smooth and aromatic fusion of floral oolong and juicy white peach, complemented by a rich, smooth finish. The fruity peach notes brighten the tea's roasted depth, creating a perfectly balanced, refreshing, and slightly indulgent latte.",
     imageUrl:
       "https://prod-us-web.s3.us-west-1.amazonaws.com/uploads/20251204/744ffb65-dba4-4a86-862e-a50607f818bd.jpg",
-    ingredients: ["Oolong tea", "White peach", "Milk"],
+    ingredients: ["Oolong tea", "White peach"],
     tags: ["peach", "oolong"],
     shop: "Chagee",
     shopUrl: "https://www.chagee.us/product/Tea%20Lattes?autoscroll=lists",
@@ -380,7 +380,7 @@ export const DRINKS: BobaDrink[] = [
       "Toasty and rich, this latte highlights the deep caramel and nutty flavors of roasted oolong, while adding a light creamy finish. The tea has a subtle earthiness, making it a cozy and satisfying choice for those who love bold, unique, yet smooth flavors.",
     imageUrl:
       "https://prod-us-web.s3.us-west-1.amazonaws.com/uploads/20260317/bc5225b8-fd62-470c-972c-7a32e032e4fb.jpg",
-    ingredients: ["Roasted oolong tea", "Milk"],
+    ingredients: ["Roasted oolong tea"],
     tags: ["roasted", "caramel"],
     shop: "Chagee",
     shopUrl: "https://www.chagee.us/product/Tea%20Lattes?autoscroll=lists",
@@ -393,7 +393,7 @@ export const DRINKS: BobaDrink[] = [
       "Smoky and full-bodied, this latte brings out the deep roasted and chocolatey notes of our black tea. The rich and smoky aroma is softened by milk, creating a strong yet silky-smooth and satisfying experience.",
     imageUrl:
       "https://prod-us-web.s3.us-west-1.amazonaws.com/uploads/20260317/5a61cb39-6354-4a35-97ed-c819b97dcaa9.jpg",
-    ingredients: ["Roasted black tea", "Milk"],
+    ingredients: ["Roasted black tea"],
     tags: ["smoky", "bold"],
     shop: "Chagee",
     shopUrl: "https://www.chagee.us/product/Tea%20Lattes?autoscroll=lists",
@@ -406,7 +406,7 @@ export const DRINKS: BobaDrink[] = [
       "Crafted with Ceylon black tea grown in Sri Lanka, this latte highlights the tea's subtle citrus notes, fruity undertones, and a touch of honeyed sweetness.",
     imageUrl:
       "https://prod-us-web.s3.us-west-1.amazonaws.com/uploads/20251204/a5e77741-6f45-48d3-a3d3-c4d195a94d06.jpg",
-    ingredients: ["Ceylon black tea", "Milk"],
+    ingredients: ["Ceylon black tea"],
     tags: ["citrus", "honeyed"],
     shop: "Chagee",
     shopUrl: "https://www.chagee.us/product/Tea%20Lattes?autoscroll=lists",
@@ -484,7 +484,7 @@ export const DRINKS: BobaDrink[] = [
       "CHAGEE's signature matcha blend comes with your choice of whole or oat milk for a smooth, creamy and perfectly balanced drink experience.",
     imageUrl:
       "https://prod-us-web.s3.us-west-1.amazonaws.com/uploads/20260722/95ae5acc-a028-4c34-a468-47d29c8a21ac.webp",
-    ingredients: ["Matcha", "Whole or oat milk"],
+    ingredients: ["Matcha"],
     tags: ["matcha", "creamy"],
     shop: "Chagee",
     shopUrl: "https://www.chagee.us/product/Matcha?autoscroll=lists",
@@ -497,7 +497,7 @@ export const DRINKS: BobaDrink[] = [
       "Vibrant matcha and fragrant jasmine green tea blend with milk for a smooth, delicately floral latte. Served with whole or oat milk.",
     imageUrl:
       "https://prod-us-web.s3.us-west-1.amazonaws.com/uploads/20260722/2653b300-9d27-443b-a203-3d1fc8ff3c89.webp",
-    ingredients: ["Matcha", "Jasmine green tea", "Whole or oat milk"],
+    ingredients: ["Matcha", "Jasmine green tea"],
     tags: ["matcha", "jasmine"],
     shop: "Chagee",
     shopUrl: "https://www.chagee.us/product/Matcha?autoscroll=lists",
@@ -510,7 +510,7 @@ export const DRINKS: BobaDrink[] = [
       "Our matcha blend and Peach Oolong Tea comes with your choice of whole or oat milk for a smooth latte with bright peach notes and balanced tea depth.",
     imageUrl:
       "https://prod-us-web.s3.us-west-1.amazonaws.com/uploads/20260722/71b2977c-92bc-4a7a-b58d-a7589adb5642.webp",
-    ingredients: ["Matcha", "Peach oolong tea", "Whole or oat milk"],
+    ingredients: ["Matcha", "Peach oolong tea"],
     tags: ["matcha", "peach"],
     shop: "Chagee",
     shopUrl: "https://www.chagee.us/product/Matcha?autoscroll=lists",
@@ -1043,7 +1043,7 @@ export const DRINKS: BobaDrink[] = [
       "陈皮的陈香与普洱的浓厚结合，充满岁月的古韵风味，唇齿留香。 — The aged fragrance of dried citrus peel meets the deep richness of Pu'er, carrying an antique charm that lingers on the palate.",
     imageUrl:
       "https://img-official-prod-cn.chagee.com/web/uploads/20240829/27736931-ac9b-4d40-a492-2fd833902b21.jpg",
-    ingredients: ["Pu'er tea", "Dried citrus peel", "Milk"],
+    ingredients: ["Pu'er tea", "Dried citrus peel"],
     tags: ["pu'er", "citrus peel"],
     shop: "Chagee China",
     shopUrl: "https://chagee.com/zh-cn/product/teaspresso-latte?autoscroll=lists",
@@ -1056,7 +1056,7 @@ export const DRINKS: BobaDrink[] = [
       "大红袍产于福建崇安东南部的武夷山，生长在武夷山九龙窠高岩峭壁上，日照短，多反射光，昼夜温差大，岩顶终年有细泉浸润流滴。这种特殊的自然环境，造就了大红袍的特异品质。 — Da Hong Pao grown on the sheer cliffs of Wuyi Mountain's Jiulongke, where short sunlight, reflected light, and mineral spring seepage give this tea its singular character.",
     imageUrl:
       "https://img-official-prod-cn.chagee.com/web/uploads/20240829/b5ae9afb-6368-406c-aae7-4a8e22babbf5.jpg",
-    ingredients: ["Da Hong Pao oolong tea", "Milk"],
+    ingredients: ["Da Hong Pao oolong tea"],
     tags: ["da hong pao", "latte"],
     shop: "Chagee China",
     shopUrl: "https://chagee.com/zh-cn/product/teaspresso-latte?autoscroll=lists",
@@ -1069,7 +1069,7 @@ export const DRINKS: BobaDrink[] = [
       "汤色红浓，香气高长，带松烟香，清爽甜醇，有高山韵，有桂圆香气。 — A deep red, rich-bodied liquor with a tall pine-smoke aroma, sweet and mellow with mountain character and a hint of longan fruit.",
     imageUrl:
       "https://img-official-prod-cn.chagee.com/web/uploads/20240829/f15ea0d8-9cef-4e0e-91cf-b0cea7d8d38d.jpg",
-    ingredients: ["Lapsang Souchong tea", "Milk"],
+    ingredients: ["Lapsang Souchong tea"],
     tags: ["smoky", "latte"],
     shop: "Chagee China",
     shopUrl: "https://chagee.com/zh-cn/product/teaspresso-latte?autoscroll=lists",
